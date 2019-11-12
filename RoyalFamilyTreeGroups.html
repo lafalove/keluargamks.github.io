@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Family Tree With Groups - OrgChart JS | BALKANGraph</title>
+    <style>
+        html, body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Helvetica;
+}
+
+#tree {
+    width: 100%;
+    height: 100%;
+}
+    </style>
+
+</head>
+<body>
+<link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
+<script src="https://balkangraph.com/js/latest/OrgChart.js"></script>
+<div id="tree"></div>
+    <script>
+window.onload = function () { 
+    var familyGroupTag = {
+        group: true,
+        template: "group_grey",
+        groupState: OrgChart.EXPAND
+    };
+
+    var chart = new OrgChart(document.getElementById("tree"), {
+        template: "diva",
+        enableDragDrop: true,
+        nodeBinding: {
+            field_0: "name",
+            field_1: "title",
+            img_0: "img"
+        },
+        tags: {
+            GGP: familyGroupTag,
+
+            GP1: familyGroupTag,
+            GP2: familyGroupTag,
+            GP3: familyGroupTag,
+            GP4: familyGroupTag,
+            GP5: familyGroupTag,
+            GP6: familyGroupTag,
+            GP7: familyGroupTag,
+            GP8: familyGroupTag,
+            GP9: familyGroupTag,
+            GP10: familyGroupTag,
+            GP11: familyGroupTag,
+            GP12: familyGroupTag,
+            GP13: familyGroupTag,
+            GP14: familyGroupTag,
+
+            PR1: familyGroupTag,
+            PR2: familyGroupTag,
+            PR3: familyGroupTag,
+            PR4: familyGroupTag,
+            PR5: familyGroupTag,
+            PR6: familyGroupTag,
+            PR7: familyGroupTag,
+            PR8: familyGroupTag,
+            PR9: familyGroupTag,
+            PR10: familyGroupTag,
+            PR11: familyGroupTag,
+            PR12: familyGroupTag,
+            PR13: familyGroupTag,
+
+            f1: familyGroupTag
+        },
+        nodes: [
+            { id: 1, tags: ["GGP"], name: "RM Kamidin Partodihardjo", img: "bin/MyFam1.jpg" },
+            { id: 2, tags: ["GGP"], name: "M. Kasih", title: "The Queen Mother", img: "bin/MyFam2.jpg" },
+
+            { id: 3, tags: ["GP1"], pid: 2, name: "Soemaryo", title: "Grand Papa", img: "bin/MyFam1.jpg" },
+            { id: 4, tags: ["GP1"], pid: 2, name: "Mbah Putri Soemaryo", title: "Grand Mama", img: "bin/MyFam2.jpg" },
+            
+            { id: 5, pid: 1, name: "Sumarni", title: "Grand Mama", img: "bin/MyFam2.jpg" },
+            /*{ id: 5, pid: 2, name: "Princess Margaret", img: "https://balkangraph.com/js/img/f6.png" },*/
+            { id: 6, pid: 1, name: "Sukarno", title: "Grand Mama", img: "bin/MyFam2.jpg" },
+
+            { id: 7, tags: ["GP2"], pid: 1, name: "MK Soepardi", title: "Grand Papa", img: "bin/soepardi.jpg" },
+            { id: 18, tags: ["GP2"], pid: 1, name: "Soekatimah", title: "Grand Mama", img: "bin/soekatimah.jpg" },
+
+            { id: 19, tags: ["PR1"], pid: 18, name: "Lizzard Tomo", title: "Father", img: "bin/ltomo.jpg" },
+            { id: 20, tags: ["PR1"], pid: 18, name: "Jenny Sukartini", title: "Mother", img: "bin/jenny.jpg" },
+            { id: 21, tags: ["PR2"], pid: 18, name: "Asep Rahman", title: "Father", img: "bin/rahman.jpg" },
+            { id: 22, tags: ["PR2"], pid: 18, name: "Ida Supriyati", title: "Mother", img: "bin/ida.jpg" },
+
+            { id: 8, pid: 1, name: "Suwandi", title: "Grand Mama", img: "MyFam2.jpg" },
+            { id: 9, pid: 1, name: "Suradi", title: "Grand Mama", img: "MyFam2.jpg" },
+            { id: 10, pid: 1, name: "Suparto", title: "Grand Mama", img: "MyFam2.jpg" },
+            { id: 11, pid: 1, name: "Suwarsih", title: "Grand Mama", img: "MyFam2.jpg" },
+            { id: 12, pid: 1, name: "Sumiati", title: "Grand Mama", img: "MyFam2.jpg" },
+            { id: 13, pid: 1, name: "Suryati", title: "Grand Mama", img: "MyFam2.jpg" },
+            { id: 14, pid: 1, name: "Suwarni", title: "Grand Mama", img: "MyFam2.jpg" },
+            { id: 15, pid: 1, name: "Sumarso", title: "Grand Mama", img: "MyFam2.jpg" },
+            { id: 16, pid: 1, name: "Suyono", title: "Grand Mama", img: "MyFam2.jpg" },
+            { id: 17, pid: 1, name: "Sudarsono", title: "Grand Mama", img: "MyFam2.jpg" },
+        ]
+    });
+};
+
+    </script>
+</body>
+</html>
